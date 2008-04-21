@@ -1,0 +1,11 @@
+<h1>{{ object.fileName }}</h1>
+
+<p>
+{{object.machine}}:{{ object.fullPath }}
+
+<p>
+{{ object.idHashType.description }} hash: {{ object.hash }}
+
+<p>
+<a href="{% url django.views.generic.list_detail.object_list %}">Back to files</a>
+

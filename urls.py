@@ -1,9 +1,7 @@
 from django.conf.urls.defaults import *
 
-urlpatterns = patterns('',
-    # Example:
-    # (r'^filematcher/', include('filematcher.foo.urls')),
+urlpatterns = patterns('filematcher.matcher.views',
+    (r'^files/', include('filematcher.matcher.urls')),
 
-    # Uncomment this for admin:
-     (r'^admin/', include('django.contrib.admin.urls')),
+    (r'^admin/', include('django.contrib.admin.urls')),
 )

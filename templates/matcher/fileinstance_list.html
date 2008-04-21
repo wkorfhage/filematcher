@@ -1,0 +1,9 @@
+{% if object_list %}
+    <ul>
+    {% for file in object_list %}
+        <li><a href="{% url django.views.generic.list_detail.object_detail file.idFile %}">{{ file.fileName }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No files are available.</p>
+{% endif %}

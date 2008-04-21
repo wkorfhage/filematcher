@@ -11,6 +11,17 @@ class HashType(models.Model):
     class Admin:
 	pass
 
+class HashFile(models.Model):
+    idHashFile = models.AutoField(primary_key=True)
+    file = models.FileField(upload_to="hash/%y%m%d-%H%M")
+    idHashType = models.ForeignKey(HashType)
+    description = models.TextField()
+    def __unicode__(self):
+	return self.file + " (" + self.idHashType.description + ")"
+
+    class Admin:
+	pass
+
 class FileInstance(models.Model):
     idFile = models.AutoField(primary_key=True)
     hash = models.CharField(max_length=128)

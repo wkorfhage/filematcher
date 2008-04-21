@@ -1,1 +1,12 @@
 Run the web server with  "python manage.py runserver 192.168.1.202:9000"
+
+
+Questions to answer:
+
+Are there any files on fs7 that aren't on fs6?
+
+Are there any files on fs7 that aren't on fs6 in /srv/shared1?
+
+
+Are there any files that aren't on fs7 in a similar location?
+Are there any files that aren't on fs7?
